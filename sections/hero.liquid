@@ -34,10 +34,9 @@
               {%- endif -%}
             {%- endfor -%}
             {%- for fruit in fruits -%}
-              {% capture frui %}{{ fruit }}{% endcapture %}
-              {%- if frui contains 'o' -%}
+              {% if fruit contains "o" %}
                 {{ fruit }}
-              {%- endif -%}
+              {% endif %}
             {%- endfor -%}
           </div>
           {%- when 'buttons' -%}
