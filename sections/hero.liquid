@@ -28,18 +28,22 @@
               <p>{{ fruits | join: '-' }}</p>
               <p>{{ fruits | slice: 1 }}</p>
               <p>{{ fruits | sort | join: '-' }}</p>
-              {%- for fruit in fruits -%}
-                {%- assign fruit_size = fruit | size -%}
-                {%- if fruit_size == 7 -%}
-                  {{ fruit }}
-                {%- endif -%}
-              {%- endfor -%}
+              <div>
+                {%- for fruit in fruits -%}
+                  {%- assign fruit_size = fruit | size -%}
+                  {%- if fruit_size == 7 -%}
+                    {{ fruit }}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
               {%- assign fruits_2 = 'apples, peaches, oranges, tomatoes' | split: ', ' -%}
-              {%- for fruit in fruits_2 -%}
-                {%- if fruit contains 'o' -%}
-                  {{ fruit }}
-                {%- endif -%}
-              {%- endfor -%}
+              <div>
+                {%- for fruit in fruits_2 -%}
+                  {%- if fruit contains 'o' -%}
+                    {{ fruit }}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
             </div>
           {%- when 'buttons' -%}
             <div
