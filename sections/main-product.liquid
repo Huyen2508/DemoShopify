@@ -183,7 +183,7 @@
                       {{ msg }}
                     {%- endif -%}
                   </div>
-                  {%- if product.variants.size == 0 and product.compare_at_price != blank -%}
+                  {%- if product.compare_at_price != blank -%}
                     {%-  assign old_price = product.compare_at_price -%}
                     {%-  assign sale_price = old_price | minus: product.price -%}
                     {%-  assign per_sale_price = sale_price | times: 100 -%}
