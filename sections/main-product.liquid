@@ -78,6 +78,9 @@
                     {%- assign all_tags = product.tags -%}
                     {%- for tag in all_tags -%}
                       #{{- tag | append: ' ' -}}
+                      {% if tag == 'new' or 'New' %}
+                        <p>New Product</p>
+                      {% endif %}
                     {%- endfor -%}
                   </p>
                 {% endif %}
