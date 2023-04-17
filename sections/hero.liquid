@@ -29,12 +29,6 @@
               <p>{{ fruits | slice: 1 }}</p>
               <p>{{ fruits | sort | join: '-' }}</p>
               {%- for fruit in fruits -%}
-                {%- assign fruit_size = fruit | size -%}
-                {%- if fruit_size == 7 -%}
-                  {{ fruit }}
-                {%- endif -%}
-              {%- endfor -%}
-              {%- for fruit in fruits -%}
                 {%- if fruit contains 'o' -%}
                   {{ fruit }}
                 {%- endif -%}
