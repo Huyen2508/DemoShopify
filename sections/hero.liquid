@@ -25,6 +25,12 @@
               <p>{{ hello_text | upcase }}</p>
               <p>{{ hello_text | replace: 'world', 'AHT' }}</p>
               {%- assign fruits = 'apples, peaches, oranges, tomatoes' | split: ', ' -%}
+              {%- for fruit in fruits -%}
+                {%- assign fruit_size = fruit | size -%}
+                {%- if fruit_size == 7 -%}
+                  {{ fruit }}
+                {%- endif -%}
+              {%- endfor -%}
               <p>{{ fruits | join: '-' }}</p>
               <p>{{ fruits | slice: 1 }}</p>
               <p>{{ fruits | sort | join: '-' }}</p>
