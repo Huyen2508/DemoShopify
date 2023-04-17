@@ -177,7 +177,7 @@
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
-                  {%- if card_product.compare_at_price != blank -%}
+                  {%- if card_product.compare_at_price != 0 -%}
                   {%-  assign old_price = card_product.compare_at_price -%}
                   {%-  assign sale_price = card_product.price -%}
                   {%-  assign per = sale_price | divided_by: old_price | times: 100 -%}
