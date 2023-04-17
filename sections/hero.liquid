@@ -26,7 +26,7 @@
             {%- assign fruits = 'apples, peaches, oranges, tomatoes' | split: ', ' -%}
             <p>{{ fruits | join: '-' }}</p>
             <p>{{ fruits | slice: 1 }}</p>
-            <p>{{ fruits | join: '-' | sort_natural }}</p>
+            <p>{{ fruits | sort | join: '-' }}</p>
           </div>
           {%- when 'buttons' -%}
           <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
