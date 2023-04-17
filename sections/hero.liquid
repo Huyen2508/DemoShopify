@@ -19,6 +19,10 @@
           {%- when 'text' -%}
           <div class="banner__text rte {{ block.shopify_attributes }}">
             <p>{{ block.settings.subtitle }}</p>
+            {%- assign hello_text = 'Hello world!' -%}
+            <p>{{ hello_text }}</p>
+            <p>{{ hello_text | upcase }}</p>
+            <p>{{ hello_text | replace: 'world', 'AHT' }}</p>
           </div>
           {%- when 'buttons' -%}
           <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
