@@ -1971,6 +1971,14 @@
     "main-product": {
       "name": "Product information",
       "blocks": {
+        "tags": {
+          "name": "Tags",
+          "settings": {
+            "show_tags": {
+              "label": "Enable Show Tags"
+            }
+          }
+        },
         "text": {
           "name": "Text",
           "settings": {
