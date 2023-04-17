@@ -182,8 +182,7 @@
                   {%-  assign sale_price = old_price | minus: product.price -%}
                   {%-  assign per_sale_price = sale_price | times: 100 -%}
                   {%-  assign per_sale = per_sale_price | divided_by: old_price -%}
-                    {{ old_price }}
-                  Sale {{ per_sale | round }}%
+                  <p>Sale {{ per_sale | round }}%</p>
                   {%- endif -%}
                 </div>
               {%- else -%}
