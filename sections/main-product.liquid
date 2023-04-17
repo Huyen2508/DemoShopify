@@ -181,6 +181,7 @@
                     {%-  assign msg = 'Coming soon!' -%}
                     {{ msg }}
                 </div>
+                    {%- endif -%}
                 {%- if product.compare_at_price != blank -%}
                   {%-  assign old_price = product.compare_at_price -%}
                   {%-  assign sale_price = old_price | minus: product.price -%}
@@ -188,7 +189,7 @@
                   {%-  assign per_sale = per_sale_price | divided_by: old_price -%}
                   <p>Sale {{ per_sale | round }}%</p>
                   {%- endif -%}
-              {%- endif -%}
+              
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
