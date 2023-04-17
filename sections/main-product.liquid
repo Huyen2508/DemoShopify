@@ -180,8 +180,9 @@
                   {%- else -%}
                     {%-  assign msg = 'Coming soon!' -%}
                     {{ msg }}
-                </div>
                     {%- endif -%}
+                </div>
+                    
                 {%- if product.compare_at_price != blank -%}
                   {%-  assign old_price = product.compare_at_price -%}
                   {%-  assign sale_price = old_price | minus: product.price -%}
