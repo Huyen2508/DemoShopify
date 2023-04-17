@@ -20,10 +20,12 @@
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.shopify_attributes }}">
               <p>{{ block.settings.subtitle }}</p>
+
               {%- assign hello_text = 'Hello world!' -%}
               <p>{{ hello_text }}</p>
               <p>{{ hello_text | upcase }}</p>
               <p>{{ hello_text | replace: 'world', 'AHT' }}</p>
+
               {%- assign fruits = 'apples, peaches, oranges, tomatoes' | split: ', ' -%}
               <p>{{ fruits | join: '-' }}</p>
               <p>{{ fruits | slice: 1 }}</p>
@@ -36,6 +38,7 @@
                   {%- endif -%}
                 {%- endfor -%}
               </div>
+
               {%- assign fruits_2 = 'apples, peaches, oranges, tomatoes' | split: ', ' -%}
               <div>
                 {%- for fruit in fruits_2 -%}
@@ -44,6 +47,9 @@
                   {%- endif -%}
                 {%- endfor -%}
               </div>
+
+              {%- assign num = 4.3 -%}
+              <p>{{ num | round }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
