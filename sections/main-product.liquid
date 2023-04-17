@@ -181,7 +181,7 @@
                   {%-  assign old_price = product.compare_at_price -%}
                   {%-  assign sale_price = product.price -%}
                   {%-  assign per = sale_price | divided_by: old_price -%}
-                  Sale {{ per | times: 100 }}%
+                  Sale {{ per }}%
                   {%- endif -%}
                 </div>
               {%- else -%}
