@@ -177,7 +177,7 @@
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
-                  {%- if product.compare_at_price != 0 -%}
+                  {%- if product.compare_at_price != blank -%}
                   {%-  assign old_price = product.compare_at_price -%}
                   {%-  assign sale_price = old_price | minus: product.price -%}
                   {%-  assign per_sale_price = sale_price | times: 100 -%}
