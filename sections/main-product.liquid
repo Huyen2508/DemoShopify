@@ -183,11 +183,12 @@
                       {{ msg }}
                     {%- endif -%}
                   </div>
-                  {%- if product.variants.size > 0 and product.compare_at_price != blank -%}
+                  {%- if product.variants.size == 0 and product.compare_at_price != blank -%}
                     {%-  assign old_price = product.compare_at_price -%}
                     {%-  assign sale_price = old_price | minus: product.price -%}
                     {%-  assign per_sale_price = sale_price | times: 100 -%}
                     {%-  assign per_sale = per_sale_price | divided_by: old_price -%}
+                    <p>{{ product.options.size }}</p>
                     <p>Sale {{ per_sale | round }}%</p>
                   {%- endif -%}
                 </div>
