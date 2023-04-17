@@ -179,9 +179,9 @@
                   {{ product.description }}
                   {%- if product.compare_at_price != 0 -%}
                   {%-  assign old_price = product.compare_at_price -%}
-                  {%-  assign sale_price = product.price -%}
+                  {%-  assign sale_price = old_price | minus: product.price -%}
                   {%-  assign per = sale_price | divided_by: old_price -%}
-                  Sale {{ per }}%
+                  Sale {{ per | times: 100 | ceil }}%
                   {%- endif -%}
                 </div>
               {%- else -%}
