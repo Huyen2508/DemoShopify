@@ -1356,6 +1356,12 @@
         "name": "Hero Banner"
       }
     },
+    "ex-section": {
+      "name": "Exercise",
+      "presets": {
+        "name": "Exercise"
+      }
+    },
     "image-with-text": {
       "name": "Image with text",
       "settings": {
