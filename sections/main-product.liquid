@@ -180,10 +180,9 @@
                   {%- if product.compare_at_price != 0 -%}
                   {%-  assign old_price = product.compare_at_price -%}
                   {%-  assign sale_price = old_price | minus: product.price -%}
-                  {%-  assign per = sale_price | divided_by: old_price -%}
-                    {{ old_price }}
-                    {{ sale_price }}
-                  Sale {{ per | ceil }}%
+                  {%-  assign per_sale_price = sale_price | times: 100 -%}
+                  {%-  assign per_sale = per_sale_price | divided_by: old_price -%}
+                  Sale {{ per_sale | round }}%
                   {%- endif -%}
                 </div>
               {%- else -%}
