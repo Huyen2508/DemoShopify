@@ -175,7 +175,8 @@
                 {%- if product.description != blank -%}
                   {{ product.description }}
                 {%- else -%}
-                Coming soon!
+                  {%-  assign msg = 'Coming soon!'-%}
+                  {{ msg }}
                 {%- endif -%}
               </div>
             {%- when 'sku' -%}
