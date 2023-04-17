@@ -183,7 +183,7 @@
                   {%-  assign per = sale_price | divided_by: old_price -%}
                     {{ old_price }}
                     {{ sale_price }}
-                  Sale {{ per | times: 100 | ceil }}%
+                  Sale {{ per | ceil }}%
                   {%- endif -%}
                 </div>
               {%- else -%}
