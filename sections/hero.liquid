@@ -27,6 +27,12 @@
             <p>{{ fruits | join: '-' }}</p>
             <p>{{ fruits | slice: 1 }}</p>
             <p>{{ fruits | sort | join: '-' }}</p>
+            {%- for fruit in fruits -%}
+              {%- assign fruit_size = fruit | size -%}
+              {%- if fruit_size == 7 -%}
+                {{ fruit }}
+              {%- endif -%}
+            {%- endfor -%}
           </div>
           {%- when 'buttons' -%}
           <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
