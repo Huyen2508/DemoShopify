@@ -72,6 +72,15 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
+              {%- when 'tags' -%}
+                {% if block.settings.show_tags == true %}
+                  <p class="product__text inline-richtext caption-with-letter-spacing" {{ block.shopify_attributes }}>
+                    {%- assign all_tags = product.tags -%}
+                    {%- for tag in all_tags -%}
+                      #{{- tag -}}
+                    {%- endfor -%}
+                  </p>
+                {% endif %}
             {%- when 'text' -%}
               <p
                 class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
