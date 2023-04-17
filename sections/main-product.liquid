@@ -176,7 +176,7 @@
                   {{ product.description }}
                 </div>
               {%- else -%}
-              <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}></div>
+              <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                 {%-  assign msg = 'Coming soon!' -%}
                 {{ msg }}
                 </div>
