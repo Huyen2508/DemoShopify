@@ -77,7 +77,7 @@
                   <p class="product__text inline-richtext caption-with-letter-spacing" {{ block.shopify_attributes }}>
                     {%- assign all_tags = product.tags -%}
                     {%- for tag in all_tags -%}
-                      #{{- tag | append: " " -}}
+                      #{{- tag | append: ' ' -}}
                     {%- endfor -%}
                   </p>
                 {% endif %}
