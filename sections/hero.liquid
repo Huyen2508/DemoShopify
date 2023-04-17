@@ -23,7 +23,7 @@
             <p>{{ hello_text }}</p>
             <p>{{ hello_text | upcase }}</p>
             <p>{{ hello_text | replace: 'world', 'AHT' }}</p>
-            {%- assign fruits = 'apples, oranges, peaches, tomatoes' | split -%}
+            {%- assign fruits = 'apples, oranges, peaches, tomatoes' | split: ', ' -%}
             <p>{{ fruits | join: '-' }}</p>
           </div>
           {%- when 'buttons' -%}
